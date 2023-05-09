@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         } */
 
         selectBtn = findViewById(R.id.selectBtn);
-        predictBtn = findViewById(R.id.predictBtn);
+        //predictBtn = findViewById(R.id.predictBtn);
         captureBtn = findViewById(R.id.captureBtn);
         result = findViewById(R.id.result);
         confidence = findViewById(R.id.confidence);
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        predictBtn.setOnClickListener(new View.OnClickListener() {
+        /*predictBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        }); */
 
     }
 
@@ -180,8 +180,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void restartActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        finish();
+        startActivity(getIntent());
+        //TODO overridePendingTransition(0,0);
+        //Intent intent = new Intent(this, MainActivity.class);
     }
 
     int getMax(float[] arr) {
